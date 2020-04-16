@@ -2,7 +2,7 @@
 
 In this set of exercises you will practice solving interview-style questions using hashes.
 
-**Due Monday March 30th 7pm**
+**Due Monday **** 7pm**
 
 ## Array Intersection
 
