@@ -24,13 +24,4 @@ describe "permutations?" do
     expect(permutations?("pizza", "piza")).must_equal false
   end
 
-  # Extra test I added
-  it "returns false for 'pasta' and 'aaaaa'" do
-    expect(permutations?("pasta", "aaaaa")).must_equal false
-  end
-
-  # Extra test I added
-  it "returns false for 'aaaaa' and 'pasta'" do
-    expect(permutations?("aaaaa", "pasta")).must_equal false
-  end
 end

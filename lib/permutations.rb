@@ -1,13 +1,7 @@
 
 def permutations?(string1, string2)
 
-  # if (string1 == nil && string2 == nil) || (string1.length == 0 && string2.length == 0)
-  #   return true
-  # elsif string1 == nil || string2 == nil || string1.length == 0 || string2.length == 0
-  #   return false
-  # elsif string1.length != string2.length
-  #   return false
-  # end
+  return false if string1.length != string2.length
 
   string1_array = string1.chars
   string2_array = string2.chars
