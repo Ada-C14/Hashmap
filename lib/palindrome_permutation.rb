@@ -1,7 +1,7 @@
 
 def palindrome_permutation?(string)
-  return true if string.length == 0
-
+  return true if string.empty?
+  max = string.length.even? ? string.length/2 : (string.length/2) + 1
   palindrome_check = Hash[*string.split('').collect{ |a| [a, 0] }.flatten]
-  return string.length/2 == palindrome_check.length || (string.length + 1) /2 == palindrome_check.length ? true : false
+  return palindrome_check.length == max
 end # method
