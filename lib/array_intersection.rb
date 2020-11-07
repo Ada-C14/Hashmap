@@ -1,11 +1,15 @@
+# Time: O(n+m)
+# Space: O(n)
 def intersection(list1, list2)
   results = []
-  # what should the values of this hash table be?
-  hash_table = Hash[list1.zip Array.new(list1.length, 0)]   # Time?
+  hash_table = { }
+  list1.each do |num|                           # Time: O(n)
+    hash_table[num] = true                      # is there a complexity associated with this?
+  end
 
-  list2.each do |num|                             # Time: O(m)
+  list2.each do |num|                           # Time: O(m)
     if hash_table[num]                          # Time: O(1)
-      results.push(num)                         # Space: O(n)?
+      results.push(num)                         # Space: O(n)
     end
   end
   return results
