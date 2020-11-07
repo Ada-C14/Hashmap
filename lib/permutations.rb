@@ -11,6 +11,8 @@ def permutations?(string1, string2)
   string2.each_char do |char|
     if hash_table[char] > 0
       hash_table[char] -= 1
+    else
+      return false
     end
   end
 
