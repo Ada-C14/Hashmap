@@ -1,3 +1,6 @@
+# Time Complexity: O(n + m)
+# Space Complexity: O(n)
+
 def intersection(list1, list2)
   #raise NotImplementedError, "Intersection not implemented"
   # loop through both list
