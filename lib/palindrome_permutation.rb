@@ -13,4 +13,4 @@ def palindrome_permutation?(string)
   return true if letters_hash.select { |letter,value| value%2 != 0}.keys.length <= 1
   return false
 
-end # method
+end
