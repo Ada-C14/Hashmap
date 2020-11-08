@@ -1,4 +1,3 @@
-
 def permutations?(string1, string2)
 
   hash_table = Hash.new(0)
