@@ -1,4 +1,8 @@
-
+# Time complexity: O(n)
+# looping through the characters linearly as the size of the string.
+# Could this be O(1) because the string has a max size it can be since it's an English word?
+# Space complexity: O(1)
+# lookup_hash table creation is limited to 26 letter in the English alphabet
 def palindrome_permutation?(string)
   # pseudo code
   # What requirements for a string to be a palindrome?
@@ -20,4 +24,4 @@ def palindrome_permutation?(string)
 
   odd > 1 ? false : true
 
-end # method
+end 

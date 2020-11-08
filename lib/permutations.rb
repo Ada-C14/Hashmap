@@ -1,3 +1,5 @@
+# Time complexity: O(n) : loop through the char_arr in a linear fashion
+# Space complexity: O(1) : hash_table creation is limited to 26 characters of the alphabet
 
 def permutations?(string1, string2)
   # raise NotImplementedError, "permutations? not implemented"
@@ -6,11 +8,6 @@ def permutations?(string1, string2)
   # permutations?("pasta", "atsap") => true
   # permutations?("Pizza", "Pasta") => false
 
-  # what does it mean to have permuation of the other string?
-  # we need a lookup_hash table
-  # what is the key and the value
-  # key: the letters
-  # value : boolean or integer?
   # TODO: think about how we can store and compare if the keys and values are present and if they are equal
 
   return true if string1.empty? && string2.empty?
@@ -25,7 +22,6 @@ def permutations?(string1, string2)
     lookup_hash[char] ? lookup_hash[char] += 1 : lookup_hash[char] = 1
   end
 
-  # return lookup_hash.values.all?
   lookup_hash.each_value do |value|
     return false if value.odd?
   end

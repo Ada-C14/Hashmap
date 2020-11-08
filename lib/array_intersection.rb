@@ -1,5 +1,7 @@
 # Time Complexity: O(n + m)
+# looping through in the linear fashion through list1 and list2
 # Space Complexity: O(n)
+# creation of the results_arr and the lookup_hash that could vary depending on the intersection
 
 def intersection(list1, list2)
   #raise NotImplementedError, "Intersection not implemented"
@@ -19,11 +21,12 @@ def intersection(list1, list2)
   end
 
   list2.each do |num|
-    if lookup_hash[num] # if the num is present in hash table
-      results_arr << num
-    else
-      lookup_hash[num] = true
-    end
+    # if lookup_hash[num] # if the num is present in hash table
+    #   results_arr << num
+    # else
+    #   lookup_hash[num] = true
+    # end
+    results_arr << num if lookup_hash[num]
   end
 
   return results_arr
