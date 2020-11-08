@@ -1,6 +1,6 @@
 require_relative "test_helper"
 
-xdescribe "palindrome_permutation?" do
+describe "palindrome_permutation?" do
   it "will work for hello" do
     expect(palindrome_permutation?("hello")).must_equal false
   end
@@ -9,7 +9,7 @@ xdescribe "palindrome_permutation?" do
     expect(palindrome_permutation?("carrace")).must_equal true
   end
 
-  it "will work for emptystring" do
+  it "will work for empty string" do
     expect(palindrome_permutation?("")).must_equal true
   end
 
