@@ -1,5 +1,4 @@
 def permutations?(string1, string2)
-
   return false if string1.length != string2.length
 
   hash_table = generate_hash_table(string1.chars)
