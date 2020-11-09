@@ -1,3 +1,5 @@
+# Time Complexity - O(n) because it depends on the length of the string
+# Space Complexity - O(1) because there are 26 letters in the alphabet
 def palindrome_permutation?(string)
   return true if string.empty?
 

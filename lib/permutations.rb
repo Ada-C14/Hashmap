@@ -1,3 +1,5 @@
+# Time Complexity - O(n + m) because it depends on the length of the strings
+# Space Complexity - O(1) because there are 26 letters in the alphabet
 def permutations?(string1, string2)
   return true if string1.empty? && string2.empty?
   return false if string1.length != string2.length

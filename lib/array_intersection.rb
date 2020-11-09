@@ -1,3 +1,5 @@
+# Time Complexity - O(n + m) because it depends on the length of the lists
+# Space Complexity - O(n) because the size of the array and hash depend on the length of the lists
 def intersection(list1, list2)
   return [] if list1.empty? || list2.empty?
 
