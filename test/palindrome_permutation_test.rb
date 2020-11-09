@@ -1,6 +1,6 @@
 require_relative "test_helper"
 
-xdescribe "palindrome_permutation?" do
+describe "palindrome_permutation" do
   it "will work for hello" do
     expect(palindrome_permutation?("hello")).must_equal false
   end
@@ -23,5 +23,5 @@ xdescribe "palindrome_permutation?" do
 
   it "will return true for 'lool'" do
     expect(palindrome_permutation?("lool")).must_equal true 
-  end  
+  end
 end
