@@ -7,7 +7,7 @@ def intersection(list1, list2)
   end
 
   list2.each do |number|
-    if !hash[number].nil?
+    unless hash[number].nil?
       intersected_value << number
     end
   end
