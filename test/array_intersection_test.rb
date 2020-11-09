@@ -1,6 +1,7 @@
 require_relative "test_helper"
+require_relative "../lib/array_intersection"
 
-xdescribe "Array Intersection" do
+describe "Array Intersection" do
   it "returns [4] for [2, 3, 4], and [4, 5, 6]" do
     expect(intersection([2, 3, 4], [4, 5, 6])).must_equal [4]
   end

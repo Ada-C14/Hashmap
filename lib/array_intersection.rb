@@ -14,9 +14,12 @@ def intersection(list1, list2)
   return hash_table.keep_if { |key, value| value > 1 }.keys
 end
 
+
 def generate_hash_table(list)
   hash_table = {}
-  list.each { |element| hash_table[element] = 1 }
+  list.each do |element|
+    hash_table[element] = 1
+  end
   return hash_table
 end
 

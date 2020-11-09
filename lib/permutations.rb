@@ -40,6 +40,6 @@ def to_ascii(char)
   elsif ("a".."z").include? char
     return char.ord - 97
   else
-    raise ArgumentError, "Invalid character encountered. Program exiting."
+    # raise ArgumentError, "Invalid character encountered. Program exiting."
   end
 end
