@@ -22,9 +22,6 @@ def permutations?(string1, string2)
 
 end
 
-#hash function to sort based on ASCII value (ignoring case) mod shortest string length
-#uppercase letters are 65-90
-#lowercase letters are 97-122
 def generate_hash_table(list)
   hash_table = Array.new(list.length) { Array.new }
   list.each do |char|
@@ -34,12 +31,15 @@ def generate_hash_table(list)
   return hash_table
 end
 
+#hash function to sort based on ASCII value (ignoring case) mod shortest string length
+#uppercase letters are 65-90
+#lowercase letters are 97-122
 def to_ascii(char)
   if ("A".."Z").include? char
     return char.ord - 65
   elsif ("a".."z").include? char
     return char.ord - 97
   else
-    # raise ArgumentError, "Invalid character encountered. Program exiting."
+    raise ArgumentError, "Invalid character encountered. Program exiting."
   end
 end

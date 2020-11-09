@@ -3,6 +3,7 @@ def palindrome_permutation?(string)
   return true if string.empty?
 
   hash_table = hash_function(string.chars)
+  #palindromes can only have one letter that does not repeat (center letter)
   if hash_table.filter { |element| element.length.odd? }.length > 1
     return false
   else

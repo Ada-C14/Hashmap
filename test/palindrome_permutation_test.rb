@@ -1,5 +1,4 @@
 require_relative "test_helper"
-require_relative "../lib/palindrome_permutation"
 
 describe "palindrome_permutation?" do
   it "will work for hello" do

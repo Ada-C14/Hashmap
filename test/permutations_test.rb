@@ -1,5 +1,4 @@
 require_relative "test_helper"
-require_relative "../lib/permutations"
 
 describe "permutations?" do
   it "returns true for empty string" do

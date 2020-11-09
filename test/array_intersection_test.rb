@@ -1,5 +1,4 @@
 require_relative "test_helper"
-require_relative "../lib/array_intersection"
 
 describe "Array Intersection" do
   it "returns [4] for [2, 3, 4], and [4, 5, 6]" do
