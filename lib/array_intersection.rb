@@ -10,7 +10,7 @@ def intersection(list1, list2)
 
   intersect = []
   list2.each do |num|
-    intersection << num if nums.has_key?(num)
+    intersect << num if nums.has_key?(num)
   end
   return intersect
 end
