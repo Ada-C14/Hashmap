@@ -13,7 +13,7 @@ end
 
 def populate_hash_table(hash_table, list)
   list.each do |element|
-    if hash_table.include? element
+    if hash_table[element]
       hash_table[element] += 1
     else
       hash_table[element] = 1
