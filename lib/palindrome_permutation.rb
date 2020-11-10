@@ -6,10 +6,10 @@ def palindrome_permutation(str)
 
   str.each_char do |char|      #add every letter of string to a hash: {letter => occurrences}
 
-  if str_hash[char]
+    if str_hash[char]
       str_hash[char] += 1
     else
-      str_hash[char] = 1
+     str_hash[char] = 1
     end
   end
 
