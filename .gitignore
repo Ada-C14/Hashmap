@@ -1,0 +1,4 @@
+.idea
+.gemfile
+Gemfile.lock
+.gitignore
