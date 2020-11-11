@@ -10,8 +10,5 @@ def permutations?(string1, string2)
     end
   end
 
-  if lookup.values.all?
-  else
-    return false
-  end
+  return lookup.values.all?
 end
