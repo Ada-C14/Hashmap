@@ -10,25 +10,23 @@ def permutations?(string1, string2)
 
   chars1.each do |letter|
     if lookup_hash[letter]
-      lookup_hash[letter] = 2
+      lookup_hash[letter] += 1
     else
-      lookup_hash[letter] = true
+      lookup_hash[letter] = 1
     end
 
   end
 
   chars2.each do |letter|
-    if lookup_hash[letter] == 2
-      lookup_hash[letter] = true
-    elsif lookup_hash[letter]
-      lookup_hash[letter] = false
-    else
+    if lookup_hash[letter] != nil && lookup_hash[letter] > 0
+      lookup_hash[letter] -= 1
+    elsif lookup_hash[letter] == nil || lookup_hash[letter] < 1
       return false
     end
   end
 
   chars1.each do |letter|
-    return false if lookup_hash[letter] != false
+    return false if lookup_hash[letter] > 0
   end
 
   return true

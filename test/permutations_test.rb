@@ -23,4 +23,8 @@ describe "permutations" do
   it "returns false if the number of a specific letter are different" do
     expect(permutations?("pizza", "piza")).must_equal false
   end
+
+  it "returns true for string permutation with three of the same letter" do
+    expect(permutations?("hellooo", "ooolelh")).must_equal true
+  end
 end
