@@ -18,14 +18,18 @@ def permutations?(string1, string2)
     lookup_hash.include?(char) ? lookup_hash[char] += 1 : lookup_hash[char] = 1
   end
 
+  lookup_hash2 = {}
+
   string2.each_char do |char|
-    lookup_hash[char] ? lookup_hash[char] += 1 : lookup_hash[char] = 1
+    lookup_hash2[char] ? lookup_hash2[char] += 1 : lookup_hash2[char] = 1
   end
 
-  lookup_hash.each_value do |value|
-    return false if value.odd?
-  end
+  lookup_hash == lookup_hash2 ? true : false
 
-  return true
+  # lookup_hash.each_value do |value|
+  #   return false if value.odd?
+  # end
+  #
+  # return true
 
 end

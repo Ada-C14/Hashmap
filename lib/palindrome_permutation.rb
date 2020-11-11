@@ -24,4 +24,4 @@ def palindrome_permutation?(string)
 
   odd > 1 ? false : true
 
-end 
+end
