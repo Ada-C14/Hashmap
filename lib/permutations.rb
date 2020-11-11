@@ -1,14 +1,22 @@
 def permutations?(string1, string2)
-  lookup = {}
-  string1.chars do |letter|
-    lookup[letter] = false
-  end
-
-  string2.chars do |letter|
-    if lookup.include?(letter)
-      lookup[letter] = true
+  lookup_string1 = {}
+  string1_array = string1.chars
+  string1_array.each do |letter|
+    if lookup_string1[letter] == nil
+      lookup_string1[letter] = 1
+    else
+      lookup_string1[letter] = lookup_string1[letter] + 1
     end
   end
 
-  return lookup.values.all?
+  string2_array = string2.chars
+  string2_array.each do |letter|
+    if lookup_string1[letter] == nil
+      return false
+    else
+      lookup_string1[letter] = lookup_string1[letter] - 1
+    end
+  end
+
+  return lookup_string1.values.all?(0)
 end
