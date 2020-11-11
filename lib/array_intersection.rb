@@ -1,4 +1,3 @@
-def intersection(list1, list2)
   def intersection(list1, list2)
     intersection = []
 
@@ -12,7 +11,7 @@ def intersection(list1, list2)
 
     lookup = {}
     smaller_list.each do |number|
-      lookup[number] = "true"
+      lookup[number] = ""
     end
 
     larger_list.each do |number|
@@ -23,4 +22,4 @@ def intersection(list1, list2)
 
     return intersection
   end
-end
+ 
