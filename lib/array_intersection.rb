@@ -14,3 +14,6 @@ def intersection(list1, list2)
 
   return intersected_value
 end
+
+# Time complexity: O(n)
+# Space complexity: O(n^2)
