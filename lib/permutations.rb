@@ -1,3 +1,5 @@
+# time: O(n) , n = length of the longer string, via creating the string1 hash or iterating string2
+# space: O(n), n = length of the longer string, via creating the string1 hash
 def permutations?(string1, string2)
   # return false for different size strings
   return false if string1.length != string2.length
