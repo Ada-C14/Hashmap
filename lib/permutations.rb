@@ -10,13 +10,11 @@ def permutations?(string1, string2)
     if hash[char] > 0
       hash[char] -= 1
     else
+      #return false if the char is not a hash key
       return false
     end
   end
-  hash.each_value do |value|
-    if value > 0
-      return false
-    end
-  end
-  return true
+  #return true if all the values are 0, otherwise return false
+  return hash.values.all? { |value| value == 0}
+
 end
