@@ -7,29 +7,17 @@ def permutations?(string1, string2)
   # permutations?("hello", "ehllo") => true
   # permutations?("pasta", "atsap") => true
   # permutations?("Pizza", "Pasta") => false
-
   # TODO: think about how we can store and compare if the keys and values are present and if they are equal
 
   return true if string1.empty? && string2.empty?
+  return false if string1.size != string2.size
 
-  lookup_hash = {}
+  lookup_hash = Hash.new(0)
+  lookup_hash2 = Hash.new(0)
 
-  string1.each_char do |char|
-    lookup_hash.include?(char) ? lookup_hash[char] += 1 : lookup_hash[char] = 1
-  end
+  string1.each_char {|char| lookup_hash[char] += 1}
+  string2.each_char {|char| lookup_hash2[char] += 1}
 
-  lookup_hash2 = {}
-
-  string2.each_char do |char|
-    lookup_hash2[char] ? lookup_hash2[char] += 1 : lookup_hash2[char] = 1
-  end
-
-  lookup_hash == lookup_hash2 ? true : false
-
-  # lookup_hash.each_value do |value|
-  #   return false if value.odd?
-  # end
-  #
-  # return true
+  return lookup_hash == lookup_hash2
 
 end
