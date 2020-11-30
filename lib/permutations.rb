@@ -5,11 +5,7 @@ def permutations?(string1, string2)
   hash = {}
 
   string1.length.times do |index|
-    if hash.keys.include? hash[string1[index]]
-      hash[string1[index]] += 1
-    else
-      hash[string1[index]] = 1
-    end
+    hash.keys.include? hash[string1[index]] ? hash[string1[index]] += 1 : hash[string1[index]] = 1
   end
 
   string2.length.times do |index|
@@ -19,4 +15,4 @@ def permutations?(string1, string2)
   return hash.values.all?{ |value| value.even? }
 end
 
-permutations?('pasta', 'atsap')
+# p permutations?('pasta', 'atsap')
