@@ -27,7 +27,7 @@ def palindrome_permutation?(string)
   else
     return false
   end
-  
+
 end
 
 

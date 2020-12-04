@@ -18,10 +18,8 @@ def intersection(list1, list2)
     hash[num1] = true # could be 5 or carbs (any value that is truthy)
   end
 
-  list2.each do |num2|
-    if hash[num2] # bc I'm not doing a direct comparison (double equals to look at specific value), will automatically convert to boolean (Truthy or not)
-      # If the value at num2 is truthy, it will return true
-      # If it doesn't include that key, it will return nil, which is interpreted as falsy
+  list2.each do |num2| # boolean, no direct comparison
+    if hash[num2]
       intersection_array << num2
     end
   end
@@ -29,3 +27,7 @@ def intersection(list1, list2)
   return intersection_array
 
 end
+
+# bc I'm not doing a direct comparison (double equals to look at specific value), will automatically convert to boolean (Truthy or not)
+# If the value at num2 is truthy, it will return true
+# If it doesn't include that key, it will return nil, which is interpreted as falsy
